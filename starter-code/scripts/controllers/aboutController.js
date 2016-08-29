@@ -2,8 +2,10 @@
   var aboutController = {};
 
   aboutController.reveal = function() {
-    /* TODO: Use your DOM skills to reveal only the about section! */
+    /* TODO: DONE-ish Use your DOM skills to reveal only the about section! */
+    $('.tab-content').hide();
+    console.log('about controller just hid shit');
+    $('#about').fadeIn();
   };
-
   module.aboutController = aboutController;
 })(window);

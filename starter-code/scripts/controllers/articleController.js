@@ -2,8 +2,10 @@
   var articleController = {};
 
   articleController.reveal = function() {
-    /* TODO: Use your DOM skills to reveal only the articles section! */
+    /* TODO:DONE Use your DOM skills to reveal only the articles section! */
+    $('.tab-content').hide();
+    console.log('articleController we just hid some shit');
+    $('#articles').fadeIn();
   };
-
   module.articleController = articleController;
 })(window);
