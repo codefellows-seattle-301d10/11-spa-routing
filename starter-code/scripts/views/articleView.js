@@ -59,6 +59,7 @@
   articleView.renderIndexPage = function() {
     $('#ajax-spinner').fadeOut();
     $('#filters').fadeIn();
+    // $('#article').hide();
     Article.allArticles.forEach(function(article){
       $('#articles').append(article.toHtml('#article-template'));
       if($('#category-filter option:contains("'+ article.category + '")').length === 0) {
@@ -68,12 +69,13 @@
         $('#author-filter').append(article.toHtml('#author-filter-template'));
       };
     });
-    /* TODO: Remember to also remove any calls to the handleMainNav function elsewhere. */
+    /* TODO: DONE Remember to also remove any calls to the handleMainNav function elsewhere. */
     articleView.handleCategoryFilter();
     articleView.handleAuthorFilter();
-    articleView.handleMainNav();
+    // articleView.handleMainNav();
     articleView.setTeasers();
   };
+
   Article.fetchAll(articleView.renderIndexPage);
   module.articleView = articleView;
 })(window);
