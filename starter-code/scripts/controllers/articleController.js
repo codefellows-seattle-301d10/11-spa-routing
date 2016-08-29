@@ -4,8 +4,8 @@
   articleController.reveal = function() {
     /* TODO:DONE Use your DOM skills to reveal only the articles section! */
     $('.tab-content').hide();
-    $('#articles').fadeIn(1500);
+    console.log('articleController we just hid some shit');
+    $('#articles').fadeIn();
   };
-
   module.articleController = articleController;
 })(window);

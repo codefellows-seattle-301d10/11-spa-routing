@@ -4,8 +4,8 @@
   aboutController.reveal = function() {
     /* TODO: DONE-ish Use your DOM skills to reveal only the about section! */
     $('.tab-content').hide();
-    $('#about').fadeIn(1500);
+    console.log('about controller just hid shit');
+    $('#about').fadeIn();
   };
-  // aboutController.reveal();
   module.aboutController = aboutController;
 })(window);
