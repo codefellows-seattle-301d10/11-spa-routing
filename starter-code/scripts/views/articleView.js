@@ -59,7 +59,6 @@
   articleView.renderIndexPage = function() {
     $('#ajax-spinner').fadeOut();
     $('#filters').fadeIn();
-    // $('#article').hide();
     Article.allArticles.forEach(function(article){
       $('#articles').append(article.toHtml('#article-template'));
       if($('#category-filter option:contains("'+ article.category + '")').length === 0) {
