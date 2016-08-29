@@ -2,7 +2,9 @@
   var articleController = {};
 
   articleController.reveal = function() {
-    /* TODO: Use your DOM skills to reveal only the articles section! */
+    /* TODO: DONE Use your DOM skills to reveal only the articles section! */
+    $('#about').fadeOut();
+    $('#articles').fadeIn();
   };
 
   module.articleController = articleController;
