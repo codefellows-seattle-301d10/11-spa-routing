@@ -66,6 +66,6 @@
     articleView.setTeasers();
   };
 
-  Article.fetchAll(articleView.renderIndexPage);
+  Article.fetchAll(articleView.renderIndexPage, adminView.initAdminPage);
   module.articleView = articleView;
 })(window);
