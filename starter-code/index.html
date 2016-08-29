@@ -44,6 +44,7 @@
         <ul>
           <li class="tab" data-content="articles"><a href="/" class="icon-home"> Home</a></li>
           <li class="tab" data-content="about"><a href="/about" class="icon-address-book"> About</a></li>
+          <li class="tab" data-content="admin"><a href="/admin">Admin</a></li>
           <li><a href="http://twitter.com/codefellowsSEA" target="_blank" class="icon-twitter3"> Twitter</a></li>
           <li><a href="http://github.com/" target="_blank" class="icon-github"> GitHub</a></li>
         </ul>
@@ -83,13 +84,25 @@
           </ul>
         </section>
       </section>
+      <section class="tab-content" id="admin">
+        <li class="tab"><a href="new.html">New Article</a></li>
+        <h1>Blog Stats</h1>
+        <section id="blog-stats">
+          <dt>Total articles:</dt> <dd class="articles"></dd>
+          <dt>Total words:</dt> <dd class="words"></dd>
+          <h2>Author Stats</h2>
+          <p><em>Details on who is writing, and how much writing they are doing...</em></p>
+          <ul class="author-stats">
+          </ul>
+        </section>
+      </section>
     </main>
     <footer>
       &copy; 2016 Code Fellows | Static Blog | Happy Ipsum!
     </footer>
     <!-- Vendor Files -->
-    <!-- TODO: link to our new page.js library within vendors-->
-
+    <!-- TODO: DONE link to our new page.js library within vendors-->
+    <script src="vendor/scripts/page.js"></script>
     <script src="vendor/scripts/jquery-2.1.4.js"></script>
     <script src="vendor/scripts/handlebars.js"></script>
     <script src="vendor/scripts/marked.js"></script>
@@ -98,8 +111,14 @@
     <!-- Model Files -->
     <script src="scripts/models/article.js"></script>
     <!-- View Files -->
+    <script src="/scripts/views/adminView.js"></script>
     <script src="scripts/views/articleView.js"></script>
-    <!-- TODO: place here our Controller Files -->
+    <!-- TODO: DONE place here our Controller Files -->
     <!-- Controller Files -->
+    <script src="scripts/controllers/aboutController.js"></script>
+    <script src="scripts/controllers/articleController.js"></script>
+    <script src="scripts/controllers/adminController.js"></script>
+    <script src="scripts/controllers/routes.js"></script>
+
   </body>
 </html>

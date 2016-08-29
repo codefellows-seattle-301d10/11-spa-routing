@@ -76,11 +76,12 @@
     });
   };
 
-  Article.fetchAll = function(next) {
+  Article.fetchAll = function(firstNext, secondNext) {
     webDB.execute('SELECT * FROM articles ORDER BY publishedOn DESC', function(rows) {
       if (rows.length) {
         Article.loadAll(rows);
-        next();
+        firstNext();
+        secondNext();
       } else {
         $.getJSON('/data/hackerIpsum.json', function(responseData) {
           responseData.forEach(function(item) {
@@ -89,7 +90,8 @@
           });
           webDB.execute('SELECT * FROM articles ORDER BY publishedOn DESC', function(rows) {
             Article.loadAll(rows);
-            next();
+            firstNext();
+            secondNext();
           });
         });
       }
