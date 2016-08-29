@@ -3,7 +3,7 @@
 
   aboutController.reveal = function() {
     /* TODO: DONE-ish Use your DOM skills to reveal only the about section! */
-    $('#tab-content').hide();
+    $('.tab-content').hide();
     $('#about').fadeIn(1500);
   };
   // aboutController.reveal();
