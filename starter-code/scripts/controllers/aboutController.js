@@ -3,8 +3,8 @@
 
   aboutController.reveal = function() {
     /* TODO: DONE Use your DOM skills to reveal only the about section! */
-    $('#articles, #ajax-spinner').hide();
-    $('#about').show();
+    $('#articles, #ajax-spinner').fadeOut();
+    $('#about').fadeIn();
   };
 
   module.aboutController = aboutController;
